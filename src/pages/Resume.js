@@ -1,0 +1,108 @@
+// import React from "react";
+
+// function Resume() {
+//     const resumeUrl = "https://drive.google.com/file/d/1QTSzjzHp-D5GoCqUSUx6C8BhkeULsZsQ/preview";
+
+//     return (
+//         <div style={{ position: "relative", height: "100vh" }}>
+
+//             {/* PDF Viewer */}
+//             <iframe
+//                 src={resumeUrl}
+//                 title="Resume"
+//                 style={{
+//                     width: "100%",
+//                     height: "100%",
+//                     border: "none"
+//                 }}
+//             />
+
+//             {/* Download Button */}
+//             <a
+//                 href="https://drive.google.com/uc?export=download&id=1QTSzjzHp-D5GoCqUSUx6C8BhkeULsZsQ"
+//                 className="download-btn"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 style={{
+//                     position: "fixed",
+//                     bottom: "20px",
+//                     right: "20px",
+//                     backgroundColor: "#000",
+//                     color: "#fff",
+//                     padding: "12px 18px",
+//                     borderRadius: "8px",
+//                     textDecoration: "none",
+//                     fontWeight: "600"
+//                 }}
+//             >
+//                 Download Resume
+//             </a>
+
+//         </div>
+//     );
+// }
+
+// export default Resume;
+
+
+import React, { useState } from "react";
+import "./Resume.css";
+
+function Resume() {
+    const [loading, setLoading] = useState(true);
+
+    const resumeUrl = "https://drive.google.com/file/d/1QTSzjzHp-D5GoCqUSUx6C8BhkeULsZsQ/preview";
+
+    return (
+        <div style={{ position: "relative", height: "100vh" }}>
+
+            {/* LOADER */}
+            {loading && (
+                <div className="loader-wrapper">
+                    <div className="loader"></div>
+                    <p>Loading Resume...</p>
+                </div>
+            )}
+
+            {/* PDF Viewer */}
+            <iframe
+                src={resumeUrl}
+                title="Resume"
+                style={{
+                    width: "100%",
+                    height: "100%",
+                    border: "none",
+                    opacity: loading ? 0 : 1,
+                    transition: "opacity 0.5s ease"
+                }}
+                onLoad={() => {
+                    setTimeout(() => setLoading(false), 500); // small delay
+                }}
+            />
+
+            {/* Download Button */}
+            <a
+                href="https://drive.google.com/uc?export=download&id=1QTSzjzHp-D5GoCqUSUx6C8BhkeULsZsQ"
+                className="download-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                    position: "fixed",
+                    bottom: "20px",
+                    right: "20px",
+                    backgroundColor: "#000",
+                    color: "#fff",
+                    padding: "12px 18px",
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                    fontWeight: "600"
+                }}
+            >
+                Download Resume
+            </a>
+
+        </div>
+    );
+}
+
+export default Resume;
