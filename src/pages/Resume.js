@@ -4,7 +4,7 @@ import "./Resume.css";
 function Resume() {
     const [loading, setLoading] = useState(true);
 
-    const resumeUrl = "https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/view?usp=sharing";
+    const resumeUrl = "https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/view?usp=drive_link";
 
     return (
         <div style={{ position: "relative", height: "100vh" }}>
