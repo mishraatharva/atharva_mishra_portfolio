@@ -6,6 +6,14 @@ const projects = [
         tech: ["FastAPI", "LangChain", "FAISS", "Docker"],
         github: "https://github.com/mishraatharva/multi_doc_rag",
     },
+
+    {
+        title: "AI_powdered_book_insight",
+        description:
+            "AI Powered Book Insight is a full-stack application that uses Selenium-based scraping to collect book data and stores it in a Django + MySQL backend. It implements a RAG (Retrieval-Augmented Generation) pipeline using FAISS to enable semantic search and AI-driven responses. A Next.js frontend allows users to browse books and interact with an intelligent chatbot. The system enhances traditional search by providing context-aware book recommendations.",
+        tech: ["Django", "LangChain", "FAISS", "Selenium", "MySQL", "Next.js"],
+        github: "https://github.com/mishraatharva/ai_powdered_book_insight",
+    },
     {
         title: "AI First CRM",
         description:
