@@ -35,7 +35,7 @@ function Resume() {
 
             {/* Download Button */}
             <a
-                href="https://drive.google.com/uc?export=download&id=1QTSzjzHp-D5GoCqUSUx6C8BhkeULsZsQ"
+                href="https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/view?usp=drive_link"
                 className="download-btn"
                 target="_blank"
                 rel="noopener noreferrer"
