@@ -4,7 +4,7 @@ import "./Resume.css";
 function Resume() {
     const [loading, setLoading] = useState(true);
 
-    const resumeUrl = "https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/view?usp=drive_link";
+    const resumeUrl = "https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/preview";
 
     return (
         <div style={{ position: "relative", height: "100vh" }}>
@@ -35,7 +35,7 @@ function Resume() {
 
             {/* Download Button */}
             <a
-                href="https://drive.google.com/file/d/1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG/view?usp=drive_link"
+                href="https://drive.google.com/uc?export=download&id=1FR7gX4XeMgIHZAQpabkd-yaMzk0k8hdG"
                 className="download-btn"
                 target="_blank"
                 rel="noopener noreferrer"
